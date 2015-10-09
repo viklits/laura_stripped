@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Docs</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+      body {
+        color: #333333;
+        font-family: 'Verdana', 'Droid Sans', sans-serif;
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+      }
+      body *{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      h1, h2, h3 {
+        padding: 10px 5px;
+        margin: 0;
+        background: #dedede;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.3em;
+        padding-bottom:5px;
+      }
+      h3 {
+        font-size: 0.95em;
+        padding-bottom:0px;
+      }
+      ul, ul li {
+        list-style-type: none;
+        padding:0px;
+        margin:0px;
+      }
+      ul li {
+        border-bottom:1px solid lightgray;
+        background: #fefefe;
+      }
+      ul li:first-child {
+        border-top:1px solid lightgray;
+      }
+      ul li:nth-child(2n+1) {
+        background: #eeeeee;
+      }
+      ul li a {
+        padding:5px;
+        display: block;
+      }
+      ul li a:hover {
+        background: #dedede;
+      }
+      a {
+        color: #1d96d2;
+        text-decoration: none;
+      }
+      span.method {
+        border-radius: 3px;
+        background-color: darkgray;
+        color: white;
+        padding: 3px;
+        font-size: 90%;
+        width: 56px;
+        display: inline-block;
+        text-align: center;
+      }
+      span.method.get {
+        background-color: darkgreen;
+      }
+      span.method.post {
+        background-color: darkorange;
+      }
+      span.method.put, span.method.patch {
+        background-color: darkorange;
+      }
+      span.method.delete {
+        background-color: darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="rspec_doc_table_of_content.html" target="specs">
+      API Docs
+    </a></h1>
+    
+      <h2>Dashboard:</h2>
+      
+        <h3>/</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_dashboard_current.html" target="specs">
+                <span class="method get">GET</span>
+                Dashboard: current <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>ACH Payment:</h2>
+      
+        <h3>/ach_payments</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_ach_payment_list.html" target="specs">
+                <span class="method get">GET</span>
+                ACH Payment: List <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_ach_payment_actions_create_new.html" target="specs">
+                <span class="method post">POST</span>
+                ACH Payment: actions -  create new <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+        <h3>/ach_payments/:id</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_ach_payment_actions_delete.html" target="specs">
+                <span class="method delete">DELETE</span>
+                ACH Payment: actions -  delete <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>Bills:</h2>
+      
+        <h3>/bills</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_bills_all_bills.html" target="specs">
+                <span class="method get">GET</span>
+                Bills: all bills <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_create_new_parking_ticket.html" target="specs">
+                <span class="method post">POST</span>
+                Bills: create new parking ticket <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_create_new_water_bill.html" target="specs">
+                <span class="method post">POST</span>
+                Bills: create new water bill <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_lists_of_parking_tickets.html" target="specs">
+                <span class="method get">GET</span>
+                Bills: lists of Parking tickets <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_lists_of_payed_bills.html" target="specs">
+                <span class="method get">GET</span>
+                Bills: lists of payed bills <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_lists_of_unpayed_bills.html" target="specs">
+                <span class="method get">GET</span>
+                Bills: lists of unpayed bills <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_bills_lists_of_water_bills.html" target="specs">
+                <span class="method get">GET</span>
+                Bills: lists of water bills <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>Credit card:</h2>
+      
+        <h3>/credit_cards</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_credit_card_list.html" target="specs">
+                <span class="method get">GET</span>
+                Credit card: List <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_credit_card_create_new.html" target="specs">
+                <span class="method post">POST</span>
+                Credit card: create new  <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+        <h3>/credit_cards/:id</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_credit_card_actions_delete.html" target="specs">
+                <span class="method delete">DELETE</span>
+                Credit card: actions -  delete  <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_credit_card_actions_update.html" target="specs">
+                <span class="method patch">PATCH</span>
+                Credit card: actions -  update  <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>Password recovery</h2>
+      
+        <h3>/users/password/new</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_password_recovery.html" target="specs">
+                <span class="method get">GET</span>
+                Password recovery <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>Register a new user</h2>
+      
+        <h3>/users/registrations</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_register_a_new_user_first_step.html" target="specs">
+                <span class="method post">POST</span>
+                Register a new user First step <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_register_a_new_user_second_step.html" target="specs">
+                <span class="method patch">PATCH</span>
+                Register a new user Second step <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+      <h2>User sessions:</h2>
+      
+        <h3>/users/sessions</h3>
+        <ul>
+          
+            <li>
+              <a href="rspec_doc_user_sessions_actions_sign_out.html" target="specs">
+                <span class="method delete">DELETE</span>
+                User sessions: actions -  sign out <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_user_sessions_actions_user_profile.html" target="specs">
+                <span class="method get">GET</span>
+                User sessions: actions -  user profile <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_user_sessions_actions_sign_in_with_email.html" target="specs">
+                <span class="method post">POST</span>
+                User sessions: actions - sign in with email <br />
+              </a>
+            </li>
+          
+            <li>
+              <a href="rspec_doc_user_sessions_actions_sign_in_with_phone.html" target="specs">
+                <span class="method post">POST</span>
+                User sessions: actions - sign in with phone <br />
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </body>
+</html>

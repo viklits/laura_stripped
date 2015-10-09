@@ -1,0 +1,342 @@
+<html>
+<head>
+  <title>API Docs</title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+  <style>
+    @page { size: 24.5cm 35cm } /* http://www.princexml.com/doc/9.0/page-size/ */
+
+    body {
+      color: #333333;
+      font-family: 'Verdana', 'Droid Sans', sans-serif;
+      font-size: 14px;
+      padding: 15px;
+      margin: 0;
+    }
+    body *{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .container {
+      padding: 0;
+      width: 100%;
+    }
+    h1, h2, ul {
+      margin: 0 0 10px;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2.286em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+    h3{
+      font-size: 1.57em;
+      margin: 14px 0 0px;
+      padding: 0;
+    }
+    h4{
+      font-size: 1.15em;
+      margin: 14px 0 0 0;
+      padding: 0;
+    }
+    h5{
+      font-size: 1em;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+    a {
+      color: #1d96d2;
+      text-decoration: none;
+    }
+    .required {
+      color: #f00;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    li{
+      margin-bottom: 4px;
+    }
+    .table{
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    table.params{
+      width: 100%;
+      font-size: 1em;
+      padding: 0;
+      margin: 0;
+      border-collapse: collapse;
+      border-spacing: 0px;
+    }
+    table.params tr{
+      border-top: 1px solid #cccccc;
+    }
+    table.params tr:first-child{
+      border-top: 0
+    }
+    table.params th, td{
+      margin: 0;
+      padding: 5px 8px;
+      text-align: left;
+      border-left: 1px solid #cccccc;
+      font-size: 1em;
+    }
+    table.params th:first-child, td:first-child{
+      border-left: 0;
+    }
+    table.params td{
+      background: #f9f9f9;
+    }
+    table.params tr:nth-child(2n+1) td{
+      background: #ffffff;
+    }
+    table.params td i{
+      font-style: normal;
+      font-weight: 300;
+      float: right;
+    }
+
+    code, ol{
+      display: block;
+      border-radius: 6px;
+      border: 1px solid #cccccc;
+      width: 100%;
+      background: #f5f5f5;
+      font-family: 'Courier New','Droid Sans Mono', monospace;
+      font-size: 0.85em;
+      font-weight: 700;
+    }
+    code{
+      white-space: pre-line;
+      word-wrap: break-word;
+      padding: 10px;
+      font-size: 0.85em;
+    }
+    code i{
+      font-weight: 400;
+      font-style: normal;
+    }
+    .CodeRay td {
+      width: 99%;
+    }
+    .CodeRay td.line-numbers {
+      width: 1%;
+    }
+    ol{
+      margin: 0 0 10px 0;
+      padding: 0 10px 0 50px;
+    }
+    ol li{
+      white-space: pre;
+      word-wrap: break-word;
+      border-left: 1px solid #ccc;
+      margin: 0;
+      padding: 0 4px;
+    }
+    ol li:first-child {
+      padding-top: 5px;
+    }
+    ol li:last-child {
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>
+      <a href="spec_doc_table_of_content.html">&#9650</a>
+      <a id=""></a>. Credit card: actions -  update  
+    </h3>
+
+    <p>
+      Updates new credit card with given params
+    </p>
+
+    <code>PATCH /credit_cards/:id</code>
+
+    
+      <h5>Parameters</h5>
+      <div class="table">
+        <table class="params">
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          
+            <tr>
+              <td>
+                credit_card[cc_number]
+                
+                  <i class="required">required</i>
+                
+              </td>
+              <td>String</td>
+              <td>Credit card number</td>
+            </tr>
+          
+            <tr>
+              <td>
+                credit_card[month]
+                
+                  <i class="required">required</i>
+                
+              </td>
+              <td>String</td>
+              <td>month</td>
+            </tr>
+          
+            <tr>
+              <td>
+                credit_card[year]
+                
+                  <i class="required">required</i>
+                
+              </td>
+              <td>String</td>
+              <td>year</td>
+            </tr>
+          
+            <tr>
+              <td>
+                credit_card[cvv]
+                
+                  <i class="required">required</i>
+                
+              </td>
+              <td>String</td>
+              <td>cvv</td>
+            </tr>
+          
+            <tr>
+              <td>
+                credit_card[zipcode]
+                
+                  <i class="required">required</i>
+                
+              </td>
+              <td>String</td>
+              <td>zipcode</td>
+            </tr>
+          
+        </table>
+      </div>
+    
+
+    <h4>Request</h4>
+
+    
+      <h5>Headers</h5>
+      <code>Content-Type: <i>application/x-www-form-urlencoded</i>
+Accept: <i>text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5</i>
+X-Device-Id: <i>1111111</i>
+X-Mobile-Platform: <i>IOS</i>
+X-Application-Name: <i>Laura IOS App</i>
+X-Push-Notification-Token: <i>88888888</i>
+X-Application-Version: <i>1</i>
+X-Device-Time-Zone: <i>+1</i>
+X-Device-Locale: <i>en-us</i>
+X-Authentication: <i>3f898544c32fe878e46e40e7186364a5</i></code>
+    
+
+    <h5>Route</h5>
+    <code>PATCH /credit_cards/109</code>
+
+    <h5>Query parameters</h5>
+    
+      
+      <code>
+        <table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<a href="#n5" name="n5">5</a>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+<strong><a href="#n10" name="n10">10</a></strong>
+</pre></td>
+  <td class="code"><pre>{
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>credit_card</span><span style="color:#404">&quot;</span></span> : {
+    <span style="color:#606"><span style="color:#404">&quot;</span><span>cc_number</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">4104016064227765</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606"><span style="color:#404">&quot;</span><span>month</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Dec</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606"><span style="color:#404">&quot;</span><span>year</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">2015</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606"><span style="color:#404">&quot;</span><span>cvv</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">987</span><span style="color:#710">&quot;</span></span>,
+    <span style="color:#606"><span style="color:#404">&quot;</span><span>zipcode</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">7733</span><span style="color:#710">&quot;</span></span>
+  },
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>id</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">109</span><span style="color:#710">&quot;</span></span>
+}</pre></td>
+</tr></table>
+
+      </code>
+    
+
+    <!--<h5><a href="http://curl.haxx.se/docs/manpage.html">CURL</a> Example</h5>
+    <code>TODO</code>-->
+
+    <h5>Body</h5>
+    
+      
+      <code>
+        <table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+</pre></td>
+  <td class="code"><pre><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">d</span>[<span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">n</span><span style="color:#F00;background-color:#FAA">u</span><span style="color:#F00;background-color:#FAA">m</span><span style="color:#F00;background-color:#FAA">b</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">r</span>]<span style="color:#F00;background-color:#FAA">=</span><span style="color:#00D">4104016064227765</span><span style="color:#F00;background-color:#FAA">&amp;</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">d</span>[<span style="color:#F00;background-color:#FAA">m</span><span style="color:#F00;background-color:#FAA">o</span><span style="color:#F00;background-color:#FAA">n</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">h</span>]<span style="color:#F00;background-color:#FAA">=</span><span style="color:#F00;background-color:#FAA">D</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">&amp;</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">d</span>[<span style="color:#F00;background-color:#FAA">y</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span>]<span style="color:#F00;background-color:#FAA">=</span><span style="color:#00D">2015</span><span style="color:#F00;background-color:#FAA">&amp;</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">d</span>[<span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">v</span><span style="color:#F00;background-color:#FAA">v</span>]<span style="color:#F00;background-color:#FAA">=</span><span style="color:#00D">987</span><span style="color:#F00;background-color:#FAA">&amp;</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">e</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">t</span><span style="color:#F00;background-color:#FAA">_</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">a</span><span style="color:#F00;background-color:#FAA">r</span><span style="color:#F00;background-color:#FAA">d</span>[<span style="color:#F00;background-color:#FAA">z</span><span style="color:#F00;background-color:#FAA">i</span><span style="color:#F00;background-color:#FAA">p</span><span style="color:#F00;background-color:#FAA">c</span><span style="color:#F00;background-color:#FAA">o</span><span style="color:#F00;background-color:#FAA">d</span><span style="color:#F00;background-color:#FAA">e</span>]<span style="color:#F00;background-color:#FAA">=</span><span style="color:#00D">7733</span></pre></td>
+</tr></table>
+
+      </code>
+    
+
+    <h4>Response</h4>
+
+    
+      <h5>Headers</h5>
+      <code>Content-Type: <i>application/json; charset=utf-8</i>
+Content-Length: <i>120</i></code>
+    
+
+    <h5>Status code (<a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">wiki</a>)</h5>
+    <code>HTTP 200</code>
+
+    
+      <h5>Body</h5>
+
+      
+        
+        <code>
+          <table class="CodeRay"><tr>
+  <td class="line-numbers"><pre><a href="#n1" name="n1">1</a>
+<a href="#n2" name="n2">2</a>
+<a href="#n3" name="n3">3</a>
+<a href="#n4" name="n4">4</a>
+<a href="#n5" name="n5">5</a>
+<a href="#n6" name="n6">6</a>
+<a href="#n7" name="n7">7</a>
+<a href="#n8" name="n8">8</a>
+<a href="#n9" name="n9">9</a>
+</pre></td>
+  <td class="code"><pre>{
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>id</span><span style="color:#404">&quot;</span></span> : <span style="color:#00D">109</span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>cc_number</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">4104016064227765</span><span style="color:#710">&quot;</span></span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>month</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Dec</span><span style="color:#710">&quot;</span></span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>year</span><span style="color:#404">&quot;</span></span> : <span style="color:#00D">2015</span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>cvv</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">987</span><span style="color:#710">&quot;</span></span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>zipcode</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">7733</span><span style="color:#710">&quot;</span></span>,
+  <span style="color:#606"><span style="color:#404">&quot;</span><span>card_holder_name</span><span style="color:#404">&quot;</span></span> : <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">  </span><span style="color:#710">&quot;</span></span>
+}</pre></td>
+</tr></table>
+
+        </code>
+      
+    
+  </div>
+</body>
+</html>

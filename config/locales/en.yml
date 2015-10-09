@@ -1,0 +1,27 @@
+en:
+  welcome: 'Welcome to Laura API'
+  ach_payment:
+    notifications:
+      destroyed: 'ACH Payment was successfully destroyed'
+    errors:
+      not_found: 'ACH Payment not found'
+
+
+  credit_card:
+    notifications:
+      destroyed: 'Credit card was successfully destroyed'
+    errors:
+      not_found: 'Credit card not found'
+
+  user:
+    notifications:
+      sign_out: 'Signed out successfully.'
+      password:
+        instructions_sent: 'Password recovery instructions was sent to specified email'
+    errors:
+      invalid_user: 'Invalid user'
+      invalid_headers: 'Invalid headers.'
+      invalid_credentials: 'Invalid credentials.'
+      invalid_email: 'Invalid E-Mail.'
+      user_not_found: 'No user found for given email'
+      invalid_password_recovery_token: 'Invalid password recovery token'

@@ -1,0 +1,22 @@
+development: &default
+  database: laura_api_dev
+  username: user
+  password:
+  adapter: postgresql
+  encoding: utf8
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+staging:
+  <<: *default
+  database: laura_api_staging
+
+production:
+  <<: *default
+  database: laura_api_prod
+
+test:
+  <<: *default
+  database: laura_api_test

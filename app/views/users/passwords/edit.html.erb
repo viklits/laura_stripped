@@ -1,0 +1,22 @@
+<div class="container">
+  <%= form_tag users_change_password_path, method: :patch, class: 'form-password-recovery' do%>
+    <%= hidden_field_tag :token, @token.token %>
+    <h2 class="form-password-recovery-heading">Password recovery</h2>
+    <%= password_field_tag 'user[password]', nil, placeholder: 'Password',
+      required: true, autofocus: true, class: 'form-control' %>
+    <% if errors = @token.password_errors  %>
+        <% errors.each do |err| %>
+          <div class="red"> <%= err %> </div>
+        <% end %>
+    <% end %>
+    <%= password_field_tag 'user[password_confirmation]', nil, class: 'form-control',
+      placeholder: 'Password confirmation', required: true, autofocus: true %>
+    <% if errors = @token.password_errors(:password_confirmation)%>
+        <% errors.uniq.each do |err| %>
+          <div class="red"> <%= err %> </div>
+        <% end %>
+    <% end %>
+
+    <%= submit_tag 'Save changes', class: 'btn btn-lg btn-primary btn-block' %>
+  <% end %>
+</div> <!-- /container -->
